@@ -20,6 +20,26 @@ class _LoginScreenState extends State<LoginScreen> {
   SMITrigger? trigSuccess; // se emociona
   SMITrigger? trigFail; // se pone triste (como yio)
 
+  // 1) FocusNode 
+  final emailFocus = FocusNode();
+  final passFocus = FocusNode();
+
+  // 2) Listeners (oyentes/chismoso) escuchan todos los cambios que pasan
+  @override
+  void initState() {
+    super.initState();
+    emailFocus.addListener((){
+      if (emailFocus.hasFocus){
+      isHandsUp?.change(false); //Manos abajo cuando escribes el e-mail
+      }
+    });
+    passFocus.addListener((){
+      //Manos arriba en password
+      isHandsUp?.change(passFocus.hasFocus);
+    });
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     //Para obtener el tamaño de la pantalla del dispositivo (consulta el tamaño)
@@ -55,6 +75,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 //Campo de texto del email
                 TextField(
+                  //asignas el focusNode al TextField
+                  //llamar al listener de email
+                  focusNode: emailFocus,
                   onChanged: (value) {
                     if (isHandsUp != null){
                       //corroborar que acá no se tapen los ojos al escribir el correo
@@ -81,10 +104,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 //Campo de texto de contraseña
                 TextField(
+                  focusNode: passFocus,
                   onChanged: (value) {
-                    if (isHandsUp != null){
+                    if (isChecking != null){
                       //corroborar que acá no se tapen los ojos al escribir el correo
-                      isHandsUp!.change(true);
+                      //isHandsUp!.change(true);
                     }
                     if (isChecking == null) return;
                     //activa el modo chismoso
@@ -95,6 +119,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     hintText: "Password",
                     prefixIcon: const Icon(Icons.lock),
+                    //widget de material que gestiona la interacción que tenemos, permitiendo cambiar de estado
+                    //en este caso, cambiando el icono + si podemos o no ver la contraseña
                     suffixIcon: InkWell(
                       onTap: (){
                         if(passToggle == true){
@@ -175,5 +201,12 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         )),
     );
+  }
+  // 4) liberación de recursos /limpieza de focos
+  @override
+  void dispose() {
+    emailFocus.dispose();
+    passFocus.dispose();
+    super.dispose();
   }
 }
