@@ -51,3 +51,26 @@ A login screen built with Flutter, featuring an interactive Rive animation to cr
   └── screens/
       └── login_screen.dart
 </pre>
+
+
+## 📽️ Demo
+
+<div align="center">
+
+| Login Screen | Interactive Bear |
+| :---: | :---: |
+| <img src="https://i.imgur.com/WcfEtK0.gif" width="300"> | <img src="https://i.imgur.com/Tryw2hd.gif" width="300"> |
+| *Success animation* | *Failure animation* |
+
+</div>
+
+## 👨‍🏫 About this Project
+
+**Subject**: Grafication  
+**Teacher**: Rodrigo Fidel Gaxiola Sosa
+
+## 📢 Credits
+
+**Animation Source**: [Rive Marketplace](https://rive.app/marketplace/3645-7621-remix-of-login-machine/)
+
+---
