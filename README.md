@@ -1,7 +1,7 @@
 # ✨ Login with Animation ✨
 
 <div align="center">
- <img src="https://imgur.com/a/eDUZXiw" width="23%">
+ <img src="https://i.imgur.com/WP68Nsc.png" width="23%">
 </div>
 
 
