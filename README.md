@@ -56,7 +56,8 @@ A login screen built with Flutter, featuring an interactive Rive animation to cr
 ## 📽️ Demo
 
 <div align="center">
-
+ 
+| Login Screen | Interactive Bear |
 | :---: | :---: |
 | <img src="https://i.imgur.com/WcfEtK0.gif" width="300"> | <img src="https://i.imgur.com/Tryw2hd.gif" width="300"> |
 | *Success animation* | *Failure animation* |
