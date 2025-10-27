@@ -1,6 +1,10 @@
 # ✨ Login with Animation ✨
 
-![Bear Image](https://imgur.com/a/eDUZXiw)
+<div align="center">
+ <picture>
+  <img src="https://imgur.com/a/eDUZXiw" width=384 px>
+ </picture>
+</div>
 
 
 ## 📖 About
