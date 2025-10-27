@@ -1,9 +1,7 @@
 # ✨ Login with Animation ✨
 
 <div align="center">
- <picture>
-  <img alt="Login bear" src="assets/bear.png" width=384 px>
- </picture>
+ <img src="https://imgur.com/a/eDUZXiw" width="23%">
 </div>
 
 
